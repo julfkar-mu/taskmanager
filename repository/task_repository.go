@@ -1,14 +1,14 @@
 package repository
 
 import (
-    "errors"
-    "sync"
-    "taskmanager/models"
-    "time"
+	"sync"
+	"taskmanager/errors"
+	"taskmanager/models"
+	"time"
 )
 
 var (
-    ErrTaskNotFound = errors.New("task not found")
+	ErrTaskNotFound = errors.NewNotFoundError("Task")
 )
 
 type TaskRepository interface {
